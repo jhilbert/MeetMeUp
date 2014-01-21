@@ -40,10 +40,12 @@
     {
         WebViewViewController *vc = segue.destinationViewController;
         vc.link =  [NSURL URLWithString: _meetUp[@"event_url"]];
+        vc.navigationItem.title = _meetUp[@"name"];
     } else if ([segue.identifier isEqualToString:@"CommentsSegue"])
     {
         CommentsViewController *vc = segue.destinationViewController;
         vc.eventID = _meetUp[@"id"];
+        
         NSLog(@"%@", vc.eventID);
     }
 }

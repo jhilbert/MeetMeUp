@@ -176,22 +176,22 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Fa1-XC-6Yu" detailTextLabel="rPf-Wu-Ovc" style="IBUITableViewCellStyleSubtitle" id="Wdc-DT-Sif">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentsCellID" textLabel="Fa1-XC-6Yu" detailTextLabel="rPf-Wu-Ovc" style="IBUITableViewCellStyleSubtitle" id="Wdc-DT-Sif">
                                         <rect key="frame" x="0.0" y="86" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wdc-DT-Sif">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fa1-XC-6Yu">
-                                                    <rect key="frame" x="15" y="41" width="34" height="22"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="31" id="Fa1-XC-6Yu">
+                                                    <rect key="frame" x="15" y="42" width="31" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rPf-Wu-Ovc">
-                                                    <rect key="frame" x="15" y="63" width="43" height="15"/>
+                                                    <rect key="frame" x="15" y="62" width="43" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -199,6 +199,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="J03-Hu-PWg" kind="push" id="9Ic-H6-AbG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -210,12 +213,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Comments" id="yVz-J1-kCl"/>
+                    <connections>
+                        <outlet property="commentsTableView" destination="IiF-Ea-HFL" id="cUB-px-RFD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybx-JG-Wu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1606" y="-279"/>
         </scene>
-        <!--Web View View Controller-->
+        <!--View Controller-->
+        <scene sceneID="PKh-BB-5Ar">
+            <objects>
+                <viewController id="J03-Hu-PWg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9d-5b-oeb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZU8-Ic-pcD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="btu-ZO-ohE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N7E-Ed-yOt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFP-Zb-dZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2054" y="-286"/>
+        </scene>
+        <!--Web View View Controller - Test-->
         <scene sceneID="LE5-5c-Aw8">
             <objects>
                 <viewController id="AhO-Tx-ERJ" customClass="WebViewViewController" sceneMemberID="viewController">
@@ -271,7 +296,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="98i-dM-0Tu"/>
+                    <navigationItem key="navigationItem" title="Test" id="98i-dM-0Tu"/>
                     <connections>
                         <outlet property="activitySpinner" destination="PiS-ZB-ZJj" id="EFb-DR-LXQ"/>
                         <outlet property="myWebView" destination="XNH-5A-7SZ" id="84o-gf-v6J"/>
