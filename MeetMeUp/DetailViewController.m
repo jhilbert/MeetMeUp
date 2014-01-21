@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "WebViewViewController.h"
+#import "CommentsViewController.h"
 
 @interface DetailViewController () 
 {
@@ -35,8 +36,16 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    WebViewViewController *vc = segue.destinationViewController;
-    vc.link =  [NSURL URLWithString: _meetUp[@"event_url"]];
+    if ([segue.identifier isEqualToString:@"WebViewSegue"])
+    {
+        WebViewViewController *vc = segue.destinationViewController;
+        vc.link =  [NSURL URLWithString: _meetUp[@"event_url"]];
+    } else if ([segue.identifier isEqualToString:@"CommentsSegue"])
+    {
+        CommentsViewController *vc = segue.destinationViewController;
+        vc.eventID = _meetUp[@"id"];
+        NSLog(@"%@", vc.eventID);
+    }
 }
 
 

@@ -23,6 +23,8 @@
 		6D132C28188DB33A00FC57B7 /* MeetMeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D132C27188DB33A00FC57B7 /* MeetMeUpTests.m */; };
 		6D132C33188DC31F00FC57B7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D132C32188DC31F00FC57B7 /* DetailViewController.m */; };
 		6D132C36188DC94700FC57B7 /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D132C35188DC94700FC57B7 /* WebViewViewController.m */; };
+		6DADB7C2188DE4DD002B447F /* MeetUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DADB7C1188DE4DD002B447F /* MeetUp.png */; };
+		6DADB7C6188DF828002B447F /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DADB7C5188DF828002B447F /* CommentsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		6D132C32188DC31F00FC57B7 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		6D132C34188DC94700FC57B7 /* WebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewViewController.h; sourceTree = "<group>"; };
 		6D132C35188DC94700FC57B7 /* WebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewViewController.m; sourceTree = "<group>"; };
+		6DADB7C1188DE4DD002B447F /* MeetUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MeetUp.png; sourceTree = "<group>"; };
+		6DADB7C4188DF828002B447F /* CommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
+		6DADB7C5188DF828002B447F /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +132,9 @@
 				6D132C32188DC31F00FC57B7 /* DetailViewController.m */,
 				6D132C34188DC94700FC57B7 /* WebViewViewController.h */,
 				6D132C35188DC94700FC57B7 /* WebViewViewController.m */,
+				6DADB7C4188DF828002B447F /* CommentsViewController.h */,
+				6DADB7C5188DF828002B447F /* CommentsViewController.m */,
+				6DADB7C3188DE4E4002B447F /* Images */,
 				6D132C14188DB33A00FC57B7 /* Images.xcassets */,
 				6D132C03188DB33A00FC57B7 /* Supporting Files */,
 			);
@@ -160,6 +168,14 @@
 				6D132C24188DB33A00FC57B7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DADB7C3188DE4E4002B447F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6DADB7C1188DE4DD002B447F /* MeetUp.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D132C15188DB33A00FC57B7 /* Images.xcassets in Resources */,
+				6DADB7C2188DE4DD002B447F /* MeetUp.png in Resources */,
 				6D132C07188DB33A00FC57B7 /* InfoPlist.strings in Resources */,
 				6D132C10188DB33A00FC57B7 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +278,7 @@
 			files = (
 				6D132C13188DB33A00FC57B7 /* ViewController.m in Sources */,
 				6D132C0D188DB33A00FC57B7 /* AppDelegate.m in Sources */,
+				6DADB7C6188DF828002B447F /* CommentsViewController.m in Sources */,
 				6D132C36188DC94700FC57B7 /* WebViewViewController.m in Sources */,
 				6D132C09188DB33A00FC57B7 /* main.m in Sources */,
 				6D132C33188DC31F00FC57B7 /* DetailViewController.m in Sources */,
@@ -472,6 +490,7 @@
 				6D132C2D188DB33A00FC57B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D132C2E188DB33A00FC57B7 /* Build configuration list for PBXNativeTarget "MeetMeUpTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +499,7 @@
 				6D132C30188DB33A00FC57B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

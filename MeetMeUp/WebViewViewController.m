@@ -30,7 +30,15 @@
 }
 
 
+-(void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [activitySpinner startAnimating];
+}
 
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [activitySpinner stopAnimating];
+}
 
 
 
