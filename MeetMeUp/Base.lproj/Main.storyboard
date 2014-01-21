@@ -214,17 +214,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="Comments" id="yVz-J1-kCl"/>
                     <connections>
-                        <outlet property="commentsTableView" destination="IiF-Ea-HFL" id="cUB-px-RFD"/>
+                        <outlet property="commentsTableView" destination="IiF-Ea-HFL" id="48r-IK-q2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybx-JG-Wu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1606" y="-279"/>
         </scene>
-        <!--View Controller-->
+        <!--Member View Controller-->
         <scene sceneID="PKh-BB-5Ar">
             <objects>
-                <viewController id="J03-Hu-PWg" sceneMemberID="viewController">
+                <viewController id="J03-Hu-PWg" customClass="MemberViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b9d-5b-oeb"/>
                         <viewControllerLayoutGuide type="bottom" id="ZU8-Ic-pcD"/>
@@ -232,9 +232,22 @@
                     <view key="view" contentMode="scaleToFill" id="btu-ZO-ohE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qyc-U5-4U4">
+                                <rect key="frame" x="0.0" y="67" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="N7E-Ed-yOt"/>
+                    <connections>
+                        <outlet property="memberTableView" destination="qyc-U5-4U4" id="IGj-DB-CcS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFP-Zb-dZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

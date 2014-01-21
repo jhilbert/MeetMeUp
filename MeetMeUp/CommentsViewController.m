@@ -7,6 +7,7 @@
 //
 
 #import "CommentsViewController.h"
+#import "MemberViewController.h"
 
 @interface CommentsViewController () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -23,8 +24,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSURL *url = [NSURL URLWithString:@"https://api.meetup.com/2/event_comments?&sign=true&event_id=150355512&page=20&key=4b52491924a2a61351604627265a78"];
+    NSString *string = [NSString stringWithFormat:@"https://api.meetup.com/2/event_comments?&sign=true&event_id=%@&page=20&key=4b52491924a2a61351604627265a78",_eventID];
+    NSURL *url = [NSURL URLWithString:string];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
@@ -35,6 +36,13 @@
 
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MemberViewController *vc = segue.destinationViewController;
+    NSIndexPath *indexPath = [commentsTableView indexPathForSelectedRow];
+    vc.memberID = comments[indexPath.row][@"member_id"];
+    NSLog(@"%@",vc.memberID);
+}
 
 
 

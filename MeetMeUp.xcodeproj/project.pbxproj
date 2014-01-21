@@ -126,9 +126,9 @@
 		6D132C02188DB33A00FC57B7 /* MeetMeUp */ = {
 			isa = PBXGroup;
 			children = (
+				6D132C0E188DB33A00FC57B7 /* Main.storyboard */,
 				6D132C0B188DB33A00FC57B7 /* AppDelegate.h */,
 				6D132C0C188DB33A00FC57B7 /* AppDelegate.m */,
-				6D132C0E188DB33A00FC57B7 /* Main.storyboard */,
 				6D132C11188DB33A00FC57B7 /* ViewController.h */,
 				6D132C12188DB33A00FC57B7 /* ViewController.m */,
 				6D132C31188DC31F00FC57B7 /* DetailViewController.h */,

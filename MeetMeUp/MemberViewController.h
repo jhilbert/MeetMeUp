@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MemberViewController : UIViewController
+@property NSString *memberID;
 
 @end
